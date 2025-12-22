@@ -1,3 +1,19 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+.hero, .section, .header, .footer {
+  overflow-x: clip;
+}
 :root{
   --bg:#070a12;
   --card:rgba(255,255,255,.06);
