@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tu Marca | Sitio Profesional</title>
+  <meta name="description" content="Sitio web profesional para tu marca. Servicios, portafolio y contacto." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="#">TuMarca</a>
+
+      <button class="menuBtn" aria-label="Abrir menú" id="menuBtn">☰</button>
+
+      <ul class="menu" id="menu">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="btn" href="#contacto">Cotizar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container heroGrid">
+        <div>
+          <p class="pill">🚀 Sitios rápidos, modernos y confiables</p>
+          <h1>Haz que tu marca se vea <span class="accent">100% profesional</span> en internet</h1>
+          <p class="lead">
+            Diseño limpio, adaptable a celular, optimizado para cargar rápido, con estructura lista para vender y generar confianza.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#contacto">Quiero mi web</a>
+            <a class="btn ghost" href="#trabajos">Ver ejemplos</a>
+          </div>
+
+          <div class="badges">
+            <div class="badge">✅ Responsive</div>
+            <div class="badge">⚡ Rápido</div>
+            <div class="badge">🔎 SEO básico</div>
+            <div class="badge">🔒 Buenas prácticas</div>
+          </div>
+        </div>
+
+        <div class="card preview">
+          <div class="previewTop">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+          </div>
+          <div class="previewBody">
+            <div class="line w80"></div>
+            <div class="line w95"></div>
+            <div class="line w60"></div>
+            <div class="grid2">
+              <div class="mini"></div>
+              <div class="mini"></div>
+              <div class="mini"></div>
+              <div class="mini"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2>Servicios</h2>
+        <p class="muted">Lo esencial para un sitio que se vea serio y convierta.</p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Landing que vende</h3>
+            <p>Una sola página bien estructurada para que la gente entienda y te contacte.</p>
+          </article>
+          <article class="card">
+            <h3>Web corporativa</h3>
+            <p>Secciones claras, estética moderna, mensajes directos y ordenados.</p>
+          </article>
+          <article class="card">
+            <h3>Optimización</h3>
+            <p>Carga rápida, estructura SEO básica, textos y botones pensados para conversión.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="trabajos" class="section alt">
+      <div class="container">
+        <h2>Trabajos / Ejemplos</h2>
+        <p class="muted">Aquí irían tus proyectos o capturas, con una breve explicación.</p>
+
+        <div class="portfolio">
+          <div class="shot"></div>
+          <div class="shot"></div>
+          <div class="shot"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq">
+          <details class="card">
+            <summary>¿Cuánto tarda en estar lista?</summary>
+            <p>Depende del contenido, pero una landing simple puede estar lista rápido si ya tienes logo, textos e idea clara.</p>
+          </details>
+          <details class="card">
+            <summary>¿Se ve bien en celular?</summary>
+            <p>Sí, esta plantilla es responsive y se adapta a diferentes pantallas.</p>
+          </details>
+          <details class="card">
+            <summary>¿Incluye formulario?</summary>
+            <p>Sí, abajo tienes un formulario base. Se puede conectar a correo o a un servicio.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section alt">
+      <div class="container contactGrid">
+        <div>
+          <h2>Contacto</h2>
+          <p class="muted">Cuéntame qué necesitas y te lo dejo armado con un diseño bien fino.</p>
+          <ul class="list">
+            <li>📩 Email: tuemail@dominio.com</li>
+            <li>📱 WhatsApp: +593 000 000 000</li>
+            <li>📍 Ecuador / Remoto</li>
+          </ul>
+        </div>
+
+        <form class="card form" onsubmit="return false;">
+          <label>
+            Nombre
+            <input type="text" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="tucorreo@ejemplo.com" required />
+          </label>
+          <label>
+            Mensaje
+            <textarea rows="5" placeholder="Cuéntame qué sitio quieres..." required></textarea>
+          </label>
+          <button class="btn" type="submit" id="sendBtn">Enviar</button>
+          <p class="tiny muted" id="formHint">Tip: esto se puede conectar a Formspree / Netlify Forms.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footerRow">
+      <span>© <span id="year"></span> TuMarca. Todos los derechos reservados.</span>
+      <a href="#top">Subir ↑</a>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
