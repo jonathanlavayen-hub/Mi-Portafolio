@@ -3,160 +3,225 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tu Marca | Sitio Profesional</title>
-  <meta name="description" content="Sitio web profesional para tu marca. Servicios, portafolio y contacto." />
+  <title>Jonathan | Portafolio de Servicios</title>
+  <meta name="description" content="Portafolio profesional de servicios: diseño web, contenido, optimización y soporte." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body>
+
+<body id="top">
   <header class="header">
     <nav class="nav container">
-      <a class="logo" href="#">TuMarca</a>
+      <a class="logo" href="#top">MiPortafolio</a>
 
       <button class="menuBtn" aria-label="Abrir menú" id="menuBtn">☰</button>
 
       <ul class="menu" id="menu">
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#trabajos">Trabajos</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a class="btn" href="#contacto">Cotizar</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#contacto" class="btn small">Cotizar</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="container heroGrid">
-        <div>
-          <p class="pill">🚀 Sitios rápidos, modernos y confiables</p>
-          <h1>Haz que tu marca se vea <span class="accent">100% profesional</span> en internet</h1>
+        <div class="reveal">
+          <p class="pill">Disponible para nuevos proyectos</p>
+          <h1>Hago que tu marca se vea <span class="accent">pro</span> en internet</h1>
           <p class="lead">
-            Diseño limpio, adaptable a celular, optimizado para cargar rápido, con estructura lista para vender y generar confianza.
+            Sitios web modernos, rápidos y claros, con diseño elegante, animaciones suaves y enfoque en resultados.
           </p>
+
           <div class="actions">
-            <a class="btn" href="#contacto">Quiero mi web</a>
-            <a class="btn ghost" href="#trabajos">Ver ejemplos</a>
+            <a class="btn" href="#contacto">Trabajemos</a>
+            <a class="btn ghost" href="#proyectos">Ver proyectos</a>
           </div>
 
-          <div class="badges">
-            <div class="badge">✅ Responsive</div>
-            <div class="badge">⚡ Rápido</div>
-            <div class="badge">🔎 SEO básico</div>
-            <div class="badge">🔒 Buenas prácticas</div>
-          </div>
-        </div>
-
-        <div class="card preview">
-          <div class="previewTop">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-          </div>
-          <div class="previewBody">
-            <div class="line w80"></div>
-            <div class="line w95"></div>
-            <div class="line w60"></div>
-            <div class="grid2">
-              <div class="mini"></div>
-              <div class="mini"></div>
-              <div class="mini"></div>
-              <div class="mini"></div>
+          <div class="stats">
+            <div class="stat">
+              <span class="statNum">+10</span>
+              <span class="statTxt">ideas de estructura</span>
+            </div>
+            <div class="stat">
+              <span class="statNum">100%</span>
+              <span class="statTxt">responsive</span>
+            </div>
+            <div class="stat">
+              <span class="statNum">SEO</span>
+              <span class="statTxt">base incluido</span>
             </div>
           </div>
         </div>
+
+        <div class="heroCard reveal">
+          <div class="heroImgWrap">
+            <img
+              class="heroImg"
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+              alt="Trabajo profesional"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="heroMini">
+            <div class="miniTag">⚡ Rápido</div>
+            <div class="miniTag">✨ Limpio</div>
+            <div class="miniTag">📱 Mobile</div>
+            <div class="miniTag">🧠 Claro</div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- SERVICIOS -->
     <section id="servicios" class="section">
       <div class="container">
-        <h2>Servicios</h2>
-        <p class="muted">Lo esencial para un sitio que se vea serio y convierta.</p>
+        <div class="sectionHead reveal">
+          <h2>Servicios</h2>
+          <p class="muted">Paquetes claros, diseño moderno y enfoque en conversión.</p>
+        </div>
 
         <div class="cards">
-          <article class="card">
-            <h3>Landing que vende</h3>
-            <p>Una sola página bien estructurada para que la gente entienda y te contacte.</p>
+          <article class="card reveal">
+            <div class="icon">🚀</div>
+            <h3>Landing de alto impacto</h3>
+            <p>Una página que explica tu oferta sin vueltas, con secciones exactas para vender y generar confianza.</p>
           </article>
-          <article class="card">
-            <h3>Web corporativa</h3>
-            <p>Secciones claras, estética moderna, mensajes directos y ordenados.</p>
+
+          <article class="card reveal">
+            <div class="icon">🧩</div>
+            <h3>Portafolio / Web corporativa</h3>
+            <p>Tu presencia digital bien armada, con estética profesional, estructura ordenada y navegación simple.</p>
           </article>
-          <article class="card">
-            <h3>Optimización</h3>
-            <p>Carga rápida, estructura SEO básica, textos y botones pensados para conversión.</p>
+
+          <article class="card reveal">
+            <div class="icon">⚙️</div>
+            <h3>Optimización y mejoras</h3>
+            <p>Velocidad, ajustes visuales, copy más claro, llamadas a la acción y detalles que elevan el nivel.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="trabajos" class="section alt">
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section alt">
       <div class="container">
-        <h2>Trabajos / Ejemplos</h2>
-        <p class="muted">Aquí irían tus proyectos o capturas, con una breve explicación.</p>
+        <div class="sectionHead reveal">
+          <h2>Proyectos</h2>
+          <p class="muted">Ejemplos de cómo se verían tus trabajos, con imágenes reales.</p>
+        </div>
 
         <div class="portfolio">
-          <div class="shot"></div>
-          <div class="shot"></div>
-          <div class="shot"></div>
+          <a class="work reveal" href="#" aria-label="Proyecto 1">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=80" alt="Proyecto 1" loading="lazy">
+            <div class="workInfo">
+              <h3>Landing para servicios</h3>
+              <p>Diseño claro, CTA fuerte y estilo elegante.</p>
+            </div>
+          </a>
+
+          <a class="work reveal" href="#" aria-label="Proyecto 2">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80" alt="Proyecto 2" loading="lazy">
+            <div class="workInfo">
+              <h3>Portafolio personal</h3>
+              <p>Secciones limpias, responsive y rápido.</p>
+            </div>
+          </a>
+
+          <a class="work reveal" href="#" aria-label="Proyecto 3">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Proyecto 3" loading="lazy">
+            <div class="workInfo">
+              <h3>Web corporativa</h3>
+              <p>Imagen de marca sólida y profesional.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="section">
+    <!-- PROCESO -->
+    <section id="proceso" class="section">
       <div class="container">
-        <h2>Preguntas frecuentes</h2>
-        <div class="faq">
-          <details class="card">
-            <summary>¿Cuánto tarda en estar lista?</summary>
-            <p>Depende del contenido, pero una landing simple puede estar lista rápido si ya tienes logo, textos e idea clara.</p>
-          </details>
-          <details class="card">
-            <summary>¿Se ve bien en celular?</summary>
-            <p>Sí, esta plantilla es responsive y se adapta a diferentes pantallas.</p>
-          </details>
-          <details class="card">
-            <summary>¿Incluye formulario?</summary>
-            <p>Sí, abajo tienes un formulario base. Se puede conectar a correo o a un servicio.</p>
-          </details>
+        <div class="sectionHead reveal">
+          <h2>Mi proceso</h2>
+          <p class="muted">Ordenado, rápido y sin enredos.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step card reveal">
+            <span class="stepNum">01</span>
+            <h3>Brief rápido</h3>
+            <p>Definimos objetivo, público y estilo visual, con ejemplos.</p>
+          </div>
+          <div class="step card reveal">
+            <span class="stepNum">02</span>
+            <h3>Diseño + estructura</h3>
+            <p>Armo la página con secciones que dan confianza y convierten.</p>
+          </div>
+          <div class="step card reveal">
+            <span class="stepNum">03</span>
+            <h3>Entrega + ajustes</h3>
+            <p>Publicación, revisión final y cambios pequeños incluidos.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- CONTACTO -->
     <section id="contacto" class="section alt">
       <div class="container contactGrid">
-        <div>
+        <div class="reveal">
           <h2>Contacto</h2>
-          <p class="muted">Cuéntame qué necesitas y te lo dejo armado con un diseño bien fino.</p>
-          <ul class="list">
-            <li>📩 Email: tuemail@dominio.com</li>
-            <li>📱 WhatsApp: +593 000 000 000</li>
-            <li>📍 Ecuador / Remoto</li>
-          </ul>
+          <p class="muted">Me dices qué necesitas y te lo armo con un estilo bien pro.</p>
+
+          <div class="contactCard card">
+            <p><b>Email:</b> tuemail@dominio.com</p>
+            <p><b>WhatsApp:</b> +593 000 000 000</p>
+            <p><b>Ubicación:</b> Ecuador / Remoto</p>
+          </div>
+
+          <p class="tiny muted">Tip: si quieres, pongo links directos a WhatsApp, Instagram y correo.</p>
         </div>
 
-        <form class="card form" onsubmit="return false;">
+        <form class="card form reveal" id="contactForm">
           <label>
             Nombre
-            <input type="text" placeholder="Tu nombre" required />
+            <input name="name" type="text" placeholder="Tu nombre" required />
           </label>
+
           <label>
             Email
-            <input type="email" placeholder="tucorreo@ejemplo.com" required />
+            <input name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
           </label>
+
           <label>
             Mensaje
-            <textarea rows="5" placeholder="Cuéntame qué sitio quieres..." required></textarea>
+            <textarea name="message" rows="5" placeholder="Cuéntame qué sitio quieres..." required></textarea>
           </label>
-          <button class="btn" type="submit" id="sendBtn">Enviar</button>
-          <p class="tiny muted" id="formHint">Tip: esto se puede conectar a Formspree / Netlify Forms.</p>
+
+          <button class="btn" type="submit">Enviar</button>
+          <p class="tiny muted" id="formMsg"></p>
         </form>
       </div>
     </section>
   </main>
 
+  <!-- Botón flotante WhatsApp -->
+  <a class="waFloat" href="https://wa.me/593000000000" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+    WhatsApp
+  </a>
+
   <footer class="footer">
     <div class="container footerRow">
-      <span>© <span id="year"></span> TuMarca. Todos los derechos reservados.</span>
+      <span>© <span id="year"></span> Mi Portafolio</span>
       <a href="#top">Subir ↑</a>
     </div>
   </footer>
