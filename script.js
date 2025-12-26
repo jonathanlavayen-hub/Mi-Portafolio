@@ -1,4 +1,3 @@
-// Year
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // Reveal on scroll
@@ -8,10 +7,9 @@ const io = new IntersectionObserver((entries) => {
     if (e.isIntersecting) e.target.classList.add("show");
   }
 }, { threshold: 0.12 });
-
 reveals.forEach(el => io.observe(el));
 
-// Cursor blob follow (suave)
+// Cursor blob follow
 const blob = document.getElementById("cursorBlob");
 let mouseX = 0, mouseY = 0, bx = 0, by = 0;
 
@@ -51,8 +49,8 @@ filterBtns.forEach(btn => {
 const leadForm = document.getElementById("leadForm");
 leadForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
   const data = new FormData(leadForm);
+
   const nombre = (data.get("nombre") || "").toString().trim();
   const servicio = (data.get("servicio") || "").toString().trim();
   const mensaje = (data.get("mensaje") || "").toString().trim();
@@ -82,3 +80,4 @@ mLinks.forEach(l => l.addEventListener("click", () => {
   burger.setAttribute("aria-expanded", "false");
   mobileMenu.setAttribute("aria-hidden", "true");
 }));
+
