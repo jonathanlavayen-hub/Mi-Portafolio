@@ -1,55 +1,84 @@
-// Año
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+// Year
+document.getElementById("year").textContent = new Date().getFullYear();
 
-// Menú responsive
-const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementById("menu");
-
-if (menuBtn && menu) {
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("open");
-  });
-
-  menu.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => menu.classList.remove("open"));
-  });
-}
-
-// Animaciones al hacer scroll (reveal)
-function initReveal() {
-  const items = document.querySelectorAll(".reveal");
-
-  // Si no existen elementos con .reveal, no hay nada que animar
-  if (!items.length) return;
-
-  // Si el navegador no soporta IntersectionObserver, mostramos todo
-  if (!("IntersectionObserver" in window)) {
-    items.forEach(el => el.classList.add("show"));
-    return;
+// Reveal on scroll
+const reveals = document.querySelectorAll(".reveal");
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) {
+    if (e.isIntersecting) e.target.classList.add("show");
   }
+}, { threshold: 0.12 });
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("show");
-        io.unobserve(e.target);
-      }
+reveals.forEach(el => io.observe(el));
+
+// Cursor blob follow (suave)
+const blob = document.getElementById("cursorBlob");
+let mouseX = 0, mouseY = 0, bx = 0, by = 0;
+
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateBlob(){
+  bx += (mouseX - bx) * 0.06;
+  by += (mouseY - by) * 0.06;
+  blob.style.left = bx + "px";
+  blob.style.top = by + "px";
+  requestAnimationFrame(animateBlob);
+}
+animateBlob();
+
+// Portfolio filter
+const filterBtns = document.querySelectorAll(".fBtn");
+const works = document.querySelectorAll(".work");
+
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const f = btn.dataset.filter;
+    works.forEach(w => {
+      const cat = w.dataset.cat;
+      const show = (f === "all" || f === cat);
+      w.style.display = show ? "" : "none";
     });
-  }, { threshold: 0.12 });
-
-  items.forEach(el => io.observe(el));
-}
-
-initReveal();
-
-// Formulario (demo)
-const form = document.getElementById("contactForm");
-const msg = document.getElementById("formMsg");
-
-if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (msg) msg.textContent = "Enviado ✅ (demo). Si quieres, lo conecto a tu correo o WhatsApp.";
   });
-}
+});
+
+// Lead form -> WhatsApp
+const leadForm = document.getElementById("leadForm");
+leadForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const data = new FormData(leadForm);
+  const nombre = (data.get("nombre") || "").toString().trim();
+  const servicio = (data.get("servicio") || "").toString().trim();
+  const mensaje = (data.get("mensaje") || "").toString().trim();
+
+  const text =
+    `Hola Jonathan, soy ${nombre}. ` +
+    `Me interesa: ${servicio}. ` +
+    `Mensaje: ${mensaje}`;
+
+  const url = `https://wa.me/593986718265?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank", "noopener,noreferrer");
+});
+
+// Mobile menu
+const burger = document.getElementById("burger");
+const mobileMenu = document.getElementById("mobileMenu");
+const mLinks = document.querySelectorAll(".mLink");
+
+burger.addEventListener("click", () => {
+  const open = mobileMenu.classList.toggle("open");
+  burger.setAttribute("aria-expanded", open ? "true" : "false");
+  mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
+});
+
+mLinks.forEach(l => l.addEventListener("click", () => {
+  mobileMenu.classList.remove("open");
+  burger.setAttribute("aria-expanded", "false");
+  mobileMenu.setAttribute("aria-hidden", "true");
+}));
