@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jonathan Lavayen | Diseñador gráfico para redes sociales y papelería</title>
-  <meta name="description" content="Jonathan Lavayen, diseñador gráfico especializado en artes para redes sociales y papelería para emprendimientos, diseños listos para imprimir, invitaciones, stickers, empaques y más." />
-  <meta name="theme-color" content="#0b0f1a" />
+  <title>Jonathan Lavayen | Diseño para redes y papelería</title>
+  <meta name="description" content="Jonathan Lavayen, diseñador gráfico especializado en contenido para redes sociales y papelería para emprendimientos. Diseño que se siente marca." />
+  <meta name="theme-color" content="#17110f" />
 
-  <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -19,9 +18,11 @@
   <!-- Background FX -->
   <div class="bg" aria-hidden="true">
     <div class="noise"></div>
+    <div class="paper"></div>
     <div class="glow g1"></div>
     <div class="glow g2"></div>
-    <div class="grid"></div>
+    <div class="glow g3"></div>
+    <div class="grainSweep"></div>
     <div class="cursorBlob" id="cursorBlob"></div>
   </div>
 
@@ -35,7 +36,7 @@
     <nav class="nav">
       <a href="#servicios">Servicios</a>
       <a href="#portafolio">Portafolio</a>
-      <a href="#proceso">Proceso</a>
+      <a href="#metodo">Método</a>
       <a href="#contacto" class="pill">Contactar</a>
     </nav>
 
@@ -48,7 +49,7 @@
   <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
     <a href="#servicios" class="mLink">Servicios</a>
     <a href="#portafolio" class="mLink">Portafolio</a>
-    <a href="#proceso" class="mLink">Proceso</a>
+    <a href="#metodo" class="mLink">Método</a>
     <a href="#contacto" class="mLink mCta">Contactar</a>
   </div>
 
@@ -58,91 +59,63 @@
       <div class="heroInner">
         <div class="heroCopy reveal">
           <div class="chips">
-            <span class="chip">Artes para redes</span>
-            <span class="chip">Papelería premium</span>
+            <span class="chip">Redes sociales</span>
+            <span class="chip">Papelería</span>
+            <span class="chip">Packaging</span>
             <span class="chip">Listo para imprimir</span>
           </div>
 
           <h1 class="headline">
-            Diseño que <span class="grad">se ve pro</span>,
-            <span class="shine">vende mejor</span> y hace que tu marca no pase desapercibida
+            Diseño con <span class="grad">personalidad</span>,
+            que se entiende <span class="shine">en segundos</span> y se ve premium
           </h1>
 
           <p class="sub">
             Soy <strong>Jonathan Lavayen</strong>, diseñador gráfico especializado en
-            <strong>contenido para redes sociales</strong> (FB, IG, LinkedIn, X, y más) y
-            <strong>papelería para emprendimientos</strong>, todo con un estilo limpio, llamativo, coherente, y con detalles que sí se notan.
+            <strong>artes para redes</strong> (FB, IG, LinkedIn, X, y más) y
+            <strong>papelería para emprendimientos</strong>, hago piezas que se sienten coherentes, atractivas, y con estilo.
           </p>
 
           <div class="heroCtas">
             <a class="btn primary" href="#contacto">
-              <span>Agendar / Cotizar</span>
+              <span>Quiero una propuesta</span>
               <i class="iArrow" aria-hidden="true"></i>
             </a>
 
             <a class="btn ghost" target="_blank" rel="noopener"
                href="https://wa.me/593986718265?text=Hola%20Jonathan,%20quiero%20cotizar%20dise%C3%B1o%20para%20mi%20marca">
-              Hablar por WhatsApp
+              Escribir por WhatsApp
             </a>
           </div>
 
           <div class="heroStats">
             <div class="stat">
-              <div class="statNum">+30</div>
-              <div class="statTxt">piezas/mes si lo necesitas</div>
+              <div class="statNum">Visual</div>
+              <div class="statTxt">más claro, más ordenado</div>
             </div>
             <div class="stat">
               <div class="statNum">Brand</div>
-              <div class="statTxt">coherente y reconocible</div>
+              <div class="statTxt">coherencia en todo</div>
             </div>
             <div class="stat">
               <div class="statNum">Print</div>
-              <div class="statTxt">archivos listos para imprenta</div>
+              <div class="statTxt">archivos listos</div>
             </div>
           </div>
         </div>
 
         <div class="heroVisual reveal">
-          <div class="deviceCard">
-            <div class="deviceTop">
-              <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
-              <span class="deviceTitle">Preview</span>
-            </div>
-
-            <div class="mockGrid">
-              <div class="mock m1">
-                <div class="mockTag">IG Post</div>
-                <div class="mockTitle">Promo con jerarquía</div>
-                <div class="mockLine"></div>
-                <div class="mockLine s"></div>
+          <div class="heroImageCard">
+            <!-- Cambia assets/hero.jpg por tu mejor imagen -->
+            <img src="./assets/hero.jpg" alt="Muestra de trabajos de diseño de Jonathan Lavayen" />
+            <div class="heroImageOverlay">
+              <div class="badgeRow">
+                <span class="badge">Social media</span>
+                <span class="badge">Papelería</span>
+                <span class="badge">Packaging</span>
               </div>
-
-              <div class="mock m2">
-                <div class="mockTag">LinkedIn</div>
-                <div class="mockTitle">Profesional y limpio</div>
-                <div class="mockLine"></div>
-                <div class="mockLine s"></div>
-              </div>
-
-              <div class="mock m3">
-                <div class="mockTag">Packaging</div>
-                <div class="mockTitle">Caja + etiqueta</div>
-                <div class="mockLine"></div>
-                <div class="mockLine s"></div>
-              </div>
-
-              <div class="mock m4">
-                <div class="mockTag">Sticker</div>
-                <div class="mockTitle">Listo para imprimir</div>
-                <div class="mockLine"></div>
-                <div class="mockLine s"></div>
-              </div>
-            </div>
-
-            <div class="orbit" aria-hidden="true">
-              <span class="orb o1"></span>
-              <span class="orb o2"></span>
-              <span class="orb o3"></span>
+              <div class="heroImageTitle">Portafolio con estilo de marca</div>
+              <div class="heroImageSub">Piezas que se ven pensadas, no improvisadas</div>
             </div>
           </div>
 
@@ -150,8 +123,7 @@
             <span class="toolPill">Photoshop</span>
             <span class="toolPill">Illustrator</span>
             <span class="toolPill">Canva</span>
-            <span class="toolPill">Branding</span>
-            <span class="toolPill">Impresión</span>
+            <span class="toolPill">Mockups</span>
           </div>
         </div>
       </div>
@@ -161,10 +133,9 @@
     <section id="servicios" class="section">
       <div class="wrap">
         <div class="sectionHead reveal">
-          <h2>Servicios que convierten ideas en piezas que se sienten “marca”</h2>
+          <h2>Lo que hago, y por qué sí se nota</h2>
           <p>
-            No se trata solo de que se vea bonito, se trata de que tu contenido tenga
-            orden, intención, coherencia visual, y que la gente lo entienda rápido, sin cansarse.
+            Lo visual no solo es “bonito”, es ritmo, jerarquía, coherencia, y un mensaje que entra rápido, por eso cada pieza se diseña con intención.
           </p>
         </div>
 
@@ -172,43 +143,43 @@
           <article class="card reveal">
             <div class="cardIcon">✦</div>
             <h3>Artes para redes sociales</h3>
-            <p>FB, IG, LinkedIn, X, historias, carruseles, anuncios, promos, contenido educativo, y estilo adaptable a tu nicho.</p>
+            <p>Posts, historias, carruseles, anuncios, promos, contenido educativo, y plantillas para mantener consistencia.</p>
             <ul class="list">
-              <li>Plantillas + línea visual</li>
-              <li>Jerarquía, contraste, legibilidad</li>
-              <li>Paquetes mensuales</li>
+              <li>Paquetes semanales o mensuales</li>
+              <li>Diseño limpio, llamativo</li>
+              <li>Formato listo para publicar</li>
             </ul>
           </article>
 
           <article class="card reveal">
             <div class="cardIcon">⟡</div>
             <h3>Papelería para emprendimientos</h3>
-            <p>Invitaciones, tarjetas, etiquetas, stickers, menús, flyers, y piezas listas para imprimir con medidas correctas.</p>
+            <p>Invitaciones, tarjetas, stickers, etiquetas, menús, flyers, con medidas correctas y salida para imprenta.</p>
             <ul class="list">
-              <li>Archivos para imprenta</li>
-              <li>Troquel, sangrado, márgenes</li>
-              <li>Detalles finos, sin enredos</li>
+              <li>Archivos ordenados</li>
+              <li>PDF/PNG, editable si aplica</li>
+              <li>Detalles pro</li>
             </ul>
           </article>
 
           <article class="card reveal">
             <div class="cardIcon">⬢</div>
             <h3>Packaging y ajustes de logo</h3>
-            <p>Diseño de cajas para diferentes productos, ajustes de logo para impresión, versiones, formatos y usos reales.</p>
+            <p>Diseño de cajas, etiquetas, variantes de logo, formatos de impresión, y adaptación según tu producto.</p>
             <ul class="list">
-              <li>Mockups / visualización</li>
-              <li>Adaptación a materiales</li>
-              <li>Entrega ordenada</li>
+              <li>Mockups de presentación</li>
+              <li>Troquel/sangrado</li>
+              <li>Listo para producción</li>
             </ul>
           </article>
         </div>
 
         <div class="ctaBar reveal">
           <div>
-            <h3>Si quieres que tu marca se vea consistente desde hoy</h3>
-            <p>Te preparo una propuesta rápida, con tiempos, entregables, y estilo visual acorde a tu negocio.</p>
+            <h3>Si tu marca necesita orden visual y presencia</h3>
+            <p>Te propongo un estilo, un plan de piezas, y una ruta clara para que avances rápido.</p>
           </div>
-          <a class="btn primary" href="#contacto">Escribir ahora</a>
+          <a class="btn primary" href="#contacto">Hablemos</a>
         </div>
       </div>
     </section>
@@ -218,143 +189,122 @@
       <div class="wrap">
         <div class="sectionHead reveal">
           <h2>Portafolio</h2>
-          <p>
-            Aquí van tus trabajos, por ahora dejé una galería elegante con “placeholders”,
-            luego tú solo reemplazas títulos y descripciones por tus proyectos reales.
-          </p>
+          <p>Galería con imágenes reales, solo coloca tus archivos dentro de <strong>/assets</strong> con los nombres indicados.</p>
         </div>
 
-        <div class="filters reveal" role="tablist" aria-label="Filtros de portafolio">
-          <button class="fBtn active" data-filter="all" role="tab">Todo</button>
-          <button class="fBtn" data-filter="social" role="tab">Redes</button>
-          <button class="fBtn" data-filter="print" role="tab">Papelería</button>
-          <button class="fBtn" data-filter="pack" role="tab">Packaging</button>
+        <div class="filters reveal">
+          <button class="fBtn active" data-filter="all">Todo</button>
+          <button class="fBtn" data-filter="social">Redes</button>
+          <button class="fBtn" data-filter="print">Papelería</button>
+          <button class="fBtn" data-filter="pack">Packaging</button>
         </div>
 
         <div class="gallery" id="gallery">
-          <!-- Social -->
           <article class="work reveal" data-cat="social">
-            <div class="workThumb t1">
-              <span class="workBadge">IG</span>
+            <div class="workThumb img">
+              <img src="./assets/p1.jpg" alt="Diseño para redes sociales - Proyecto 1" />
+              <span class="workBadge">Redes</span>
             </div>
             <div class="workInfo">
               <h3>Pack de posts para promoción</h3>
-              <p>Diseño con jerarquía clara, texto que respira, y estilo consistente.</p>
-              <span class="workMeta">Formato: Feed / Story</span>
+              <p>Jerarquía clara y un estilo que se reconoce rápido.</p>
+              <span class="workMeta">FB / IG</span>
             </div>
           </article>
 
           <article class="work reveal" data-cat="social">
-            <div class="workThumb t2">
+            <div class="workThumb img">
+              <img src="./assets/p2.jpg" alt="Diseño para redes sociales - Proyecto 2" />
               <span class="workBadge">LinkedIn</span>
             </div>
             <div class="workInfo">
               <h3>Contenido profesional</h3>
-              <p>Minimal, serio, pero con un toque que no se ve plano.</p>
-              <span class="workMeta">Formato: Carrusel</span>
+              <p>Minimal, serio, pero con personalidad visual.</p>
+              <span class="workMeta">Carrusel</span>
             </div>
           </article>
 
-          <!-- Print -->
           <article class="work reveal" data-cat="print">
-            <div class="workThumb t3">
-              <span class="workBadge">Print</span>
+            <div class="workThumb img">
+              <img src="./assets/p3.jpg" alt="Papelería - Proyecto 3" />
+              <span class="workBadge">Papelería</span>
             </div>
             <div class="workInfo">
               <h3>Invitación / tarjeta</h3>
-              <p>Listo para impresión, medidas correctas, y detalles finos.</p>
-              <span class="workMeta">PDF + editable</span>
+              <p>Listo para imprimir, con medidas y detalles cuidados.</p>
+              <span class="workMeta">Print</span>
             </div>
           </article>
 
           <article class="work reveal" data-cat="print">
-            <div class="workThumb t4">
+            <div class="workThumb img">
+              <img src="./assets/p4.jpg" alt="Stickers - Proyecto 4" />
               <span class="workBadge">Sticker</span>
             </div>
             <div class="workInfo">
               <h3>Stickers para producto</h3>
-              <p>Diseño compacto, legible, y pensado para varios tamaños.</p>
-              <span class="workMeta">CMYK / sangrado</span>
+              <p>Diseño compacto, legible, y adaptable a tamaños.</p>
+              <span class="workMeta">PNG / PDF</span>
             </div>
           </article>
 
-          <!-- Packaging -->
           <article class="work reveal" data-cat="pack">
-            <div class="workThumb t5">
-              <span class="workBadge">Caja</span>
+            <div class="workThumb img">
+              <img src="./assets/p5.jpg" alt="Packaging - Proyecto 5" />
+              <span class="workBadge">Packaging</span>
             </div>
             <div class="workInfo">
-              <h3>Diseño de caja (packaging)</h3>
-              <p>Visual limpio con presencia, ideal para marca emergente.</p>
-              <span class="workMeta">Dieline / mockup</span>
+              <h3>Diseño de caja</h3>
+              <p>Presencia visual y coherencia para marca emergente.</p>
+              <span class="workMeta">Dieline</span>
             </div>
           </article>
 
           <article class="work reveal" data-cat="pack">
-            <div class="workThumb t6">
+            <div class="workThumb img">
+              <img src="./assets/p6.jpg" alt="Etiqueta / Logo - Proyecto 6" />
               <span class="workBadge">Etiqueta</span>
             </div>
             <div class="workInfo">
               <h3>Etiqueta + ajuste de logo</h3>
-              <p>Corrección de proporciones, versiones, y salida para impresión.</p>
-              <span class="workMeta">AI / PDF / PNG</span>
+              <p>Versiones correctas para impresión y redes.</p>
+              <span class="workMeta">AI / PDF</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PROCESO -->
-    <section id="proceso" class="section">
+    <!-- MÉTODO -->
+    <section id="metodo" class="section">
       <div class="wrap">
         <div class="sectionHead reveal">
-          <h2>Proceso simple, sin drama, sin vueltas raras</h2>
+          <h2>Mi método de trabajo</h2>
           <p>
-            Para que el resultado salga bien, el camino también debe ser claro, y si algo se ajusta,
-            se ajusta rápido, con comunicación directa.
+            Un flujo claro, rápido y con buen gusto, para que el resultado salga fino desde el primer intento y el ajuste sea mínimo.
           </p>
         </div>
 
         <div class="steps">
           <div class="step reveal">
             <div class="stepNum">01</div>
-            <h3>Brief rápido</h3>
-            <p>Me cuentas tu idea, tu producto, tu público, y qué necesitas, con eso ya aterrizamos el estilo.</p>
+            <h3>Idea y objetivo</h3>
+            <p>Definimos qué quieres lograr, a quién le hablas y qué debe quedar clarísimo en la pieza.</p>
           </div>
           <div class="step reveal">
             <div class="stepNum">02</div>
-            <h3>Propuesta visual</h3>
-            <p>Te muestro una línea visual, referencias, y un primer diseño base, aquí se define el rumbo.</p>
+            <h3>Estilo y referencia</h3>
+            <p>Armamos un rumbo visual, tipografías, colores, ritmo, y una línea que se repita con coherencia.</p>
           </div>
           <div class="step reveal">
             <div class="stepNum">03</div>
-            <h3>Producción</h3>
-            <p>Se hacen las piezas, se revisan detalles, y se entrega en formatos correctos para uso real.</p>
+            <h3>Diseño y revisión</h3>
+            <p>Diseño, te muestro, ajustamos lo necesario, y se afina lo que haga falta para que quede pro.</p>
           </div>
           <div class="step reveal">
             <div class="stepNum">04</div>
-            <h3>Entrega ordenada</h3>
-            <p>Recibes todo bien nombrado, bien exportado, y listo para publicar o imprimir.</p>
-          </div>
-        </div>
-
-        <div class="split reveal">
-          <div class="splitCard">
-            <h3>Herramientas</h3>
-            <p>Trabajo con Photoshop, Illustrator, Canva, y flujos de exportación para redes e imprenta.</p>
-            <div class="tags">
-              <span class="tag">PS</span><span class="tag">AI</span><span class="tag">Canva</span>
-              <span class="tag">CMYK</span><span class="tag">Branding</span><span class="tag">Mockups</span>
-            </div>
-          </div>
-          <div class="splitCard">
-            <h3>Lo que más cuido</h3>
-            <p>Jerarquía, coherencia de marca, limpieza visual, y que el mensaje se entienda en segundos.</p>
-            <div class="bars" aria-hidden="true">
-              <div class="bar"><span style="width:92%"></span></div>
-              <div class="bar"><span style="width:86%"></span></div>
-              <div class="bar"><span style="width:90%"></span></div>
-            </div>
+            <h3>Entrega lista</h3>
+            <p>Te entrego en formatos listos para publicar o imprimir, todo ordenado, con nombres claros.</p>
           </div>
         </div>
       </div>
@@ -365,10 +315,9 @@
       <div class="wrap">
         <div class="contactBox reveal">
           <div class="contactCopy">
-            <h2>Listo, hagamos que tu marca se vea seria y atractiva</h2>
+            <h2>¿Lo hacemos? tu marca puede verse increíble desde esta semana</h2>
             <p>
-              Escríbeme por WhatsApp y dime qué necesitas, si es redes, papelería, packaging, o todo junto,
-              y te respondo con una propuesta clara, sin complicarlo.
+              Escríbeme por WhatsApp y dime si necesitas redes, papelería o packaging, y te respondo con una propuesta clara, precios por paquete y tiempos.
             </p>
 
             <div class="contactBtns">
@@ -377,7 +326,7 @@
                 WhatsApp directo
               </a>
 
-              <!-- Reemplaza este link por tu link real de agenda (Calendly/Google Appointment) -->
+              <!-- Cambia este link por tu agenda real -->
               <a class="btn ghost" target="_blank" rel="noopener"
                  href="https://calendar.google.com/">
                 Agendar una llamada
@@ -386,7 +335,7 @@
 
             <div class="mini">
               <span class="miniDot"></span>
-              <span>Respuesta rápida, y si ya tienes referencias, mejor todavía</span>
+              <span>Si ya tienes referencias, envíamelas, así avanzamos más rápido</span>
             </div>
           </div>
 
@@ -410,13 +359,9 @@
               <textarea required name="mensaje" rows="4" placeholder="Cuéntame tu idea en 2 o 3 líneas"></textarea>
             </label>
 
-            <button class="btn primary full" type="submit">
-              Enviar por WhatsApp
-            </button>
+            <button class="btn primary full" type="submit">Enviar por WhatsApp</button>
 
-            <p class="fine">
-              Este formulario no guarda datos, solo arma tu mensaje y lo abre en WhatsApp.
-            </p>
+            <p class="fine">Este formulario no guarda datos, solo arma tu mensaje y lo abre en WhatsApp.</p>
           </form>
         </div>
 
