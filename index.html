@@ -2,80 +2,156 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jonathan | Portafolio de Servicios</title>
-  <meta name="description" content="Portafolio profesional de servicios: diseño web, contenido, optimización y soporte." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jonathan Lavayen | Diseñador gráfico para redes sociales y papelería</title>
+  <meta name="description" content="Jonathan Lavayen, diseñador gráfico especializado en artes para redes sociales y papelería para emprendimientos, diseños listos para imprimir, invitaciones, stickers, empaques y más." />
+  <meta name="theme-color" content="#0b0f1a" />
 
+  <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
-<body id="top">
-  <header class="header">
-    <nav class="nav container">
-      <a class="logo" href="#top">MiPortafolio</a>
+<body>
+  <!-- Background FX -->
+  <div class="bg" aria-hidden="true">
+    <div class="noise"></div>
+    <div class="glow g1"></div>
+    <div class="glow g2"></div>
+    <div class="grid"></div>
+    <div class="cursorBlob" id="cursorBlob"></div>
+  </div>
 
-      <button class="menuBtn" aria-label="Abrir menú" id="menuBtn">☰</button>
+  <!-- Topbar -->
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Ir al inicio">
+      <span class="brandMark">JL</span>
+      <span class="brandText">Jonathan Lavayen</span>
+    </a>
 
-      <ul class="menu" id="menu">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#proceso">Proceso</a></li>
-        <li><a href="#contacto" class="btn small">Cotizar</a></li>
-      </ul>
+    <nav class="nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#contacto" class="pill">Contactar</a>
     </nav>
+
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container heroGrid">
-        <div class="reveal">
-          <p class="pill">Disponible para nuevos proyectos</p>
-          <h1>Hago que tu marca se vea <span class="accent">pro</span> en internet</h1>
-          <p class="lead">
-            Sitios web modernos, rápidos y claros, con diseño elegante, animaciones suaves y enfoque en resultados.
-          </p>
+  <!-- Mobile Menu -->
+  <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
+    <a href="#servicios" class="mLink">Servicios</a>
+    <a href="#portafolio" class="mLink">Portafolio</a>
+    <a href="#proceso" class="mLink">Proceso</a>
+    <a href="#contacto" class="mLink mCta">Contactar</a>
+  </div>
 
-          <div class="actions">
-            <a class="btn" href="#contacto">Trabajemos</a>
-            <a class="btn ghost" href="#proyectos">Ver proyectos</a>
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="heroInner">
+        <div class="heroCopy reveal">
+          <div class="chips">
+            <span class="chip">Artes para redes</span>
+            <span class="chip">Papelería premium</span>
+            <span class="chip">Listo para imprimir</span>
           </div>
 
-          <div class="stats">
+          <h1 class="headline">
+            Diseño que <span class="grad">se ve pro</span>,
+            <span class="shine">vende mejor</span> y hace que tu marca no pase desapercibida
+          </h1>
+
+          <p class="sub">
+            Soy <strong>Jonathan Lavayen</strong>, diseñador gráfico especializado en
+            <strong>contenido para redes sociales</strong> (FB, IG, LinkedIn, X, y más) y
+            <strong>papelería para emprendimientos</strong>, todo con un estilo limpio, llamativo, coherente, y con detalles que sí se notan.
+          </p>
+
+          <div class="heroCtas">
+            <a class="btn primary" href="#contacto">
+              <span>Agendar / Cotizar</span>
+              <i class="iArrow" aria-hidden="true"></i>
+            </a>
+
+            <a class="btn ghost" target="_blank" rel="noopener"
+               href="https://wa.me/593986718265?text=Hola%20Jonathan,%20quiero%20cotizar%20dise%C3%B1o%20para%20mi%20marca">
+              Hablar por WhatsApp
+            </a>
+          </div>
+
+          <div class="heroStats">
             <div class="stat">
-              <span class="statNum">+10</span>
-              <span class="statTxt">ideas de estructura</span>
+              <div class="statNum">+30</div>
+              <div class="statTxt">piezas/mes si lo necesitas</div>
             </div>
             <div class="stat">
-              <span class="statNum">100%</span>
-              <span class="statTxt">responsive</span>
+              <div class="statNum">Brand</div>
+              <div class="statTxt">coherente y reconocible</div>
             </div>
             <div class="stat">
-              <span class="statNum">SEO</span>
-              <span class="statTxt">base incluido</span>
+              <div class="statNum">Print</div>
+              <div class="statTxt">archivos listos para imprenta</div>
             </div>
           </div>
         </div>
 
-        <div class="heroCard reveal">
-          <div class="heroImgWrap">
-            <img
-              class="heroImg"
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
-              alt="Trabajo profesional"
-              loading="lazy"
-            />
+        <div class="heroVisual reveal">
+          <div class="deviceCard">
+            <div class="deviceTop">
+              <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+              <span class="deviceTitle">Preview</span>
+            </div>
+
+            <div class="mockGrid">
+              <div class="mock m1">
+                <div class="mockTag">IG Post</div>
+                <div class="mockTitle">Promo con jerarquía</div>
+                <div class="mockLine"></div>
+                <div class="mockLine s"></div>
+              </div>
+
+              <div class="mock m2">
+                <div class="mockTag">LinkedIn</div>
+                <div class="mockTitle">Profesional y limpio</div>
+                <div class="mockLine"></div>
+                <div class="mockLine s"></div>
+              </div>
+
+              <div class="mock m3">
+                <div class="mockTag">Packaging</div>
+                <div class="mockTitle">Caja + etiqueta</div>
+                <div class="mockLine"></div>
+                <div class="mockLine s"></div>
+              </div>
+
+              <div class="mock m4">
+                <div class="mockTag">Sticker</div>
+                <div class="mockTitle">Listo para imprimir</div>
+                <div class="mockLine"></div>
+                <div class="mockLine s"></div>
+              </div>
+            </div>
+
+            <div class="orbit" aria-hidden="true">
+              <span class="orb o1"></span>
+              <span class="orb o2"></span>
+              <span class="orb o3"></span>
+            </div>
           </div>
 
-          <div class="heroMini">
-            <div class="miniTag">⚡ Rápido</div>
-            <div class="miniTag">✨ Limpio</div>
-            <div class="miniTag">📱 Mobile</div>
-            <div class="miniTag">🧠 Claro</div>
+          <div class="toolRow" aria-label="Herramientas">
+            <span class="toolPill">Photoshop</span>
+            <span class="toolPill">Illustrator</span>
+            <span class="toolPill">Canva</span>
+            <span class="toolPill">Branding</span>
+            <span class="toolPill">Impresión</span>
           </div>
         </div>
       </div>
@@ -83,148 +159,290 @@
 
     <!-- SERVICIOS -->
     <section id="servicios" class="section">
-      <div class="container">
+      <div class="wrap">
         <div class="sectionHead reveal">
-          <h2>Servicios</h2>
-          <p class="muted">Paquetes claros, diseño moderno y enfoque en conversión.</p>
+          <h2>Servicios que convierten ideas en piezas que se sienten “marca”</h2>
+          <p>
+            No se trata solo de que se vea bonito, se trata de que tu contenido tenga
+            orden, intención, coherencia visual, y que la gente lo entienda rápido, sin cansarse.
+          </p>
         </div>
 
         <div class="cards">
           <article class="card reveal">
-            <div class="icon">🚀</div>
-            <h3>Landing de alto impacto</h3>
-            <p>Una página que explica tu oferta sin vueltas, con secciones exactas para vender y generar confianza.</p>
+            <div class="cardIcon">✦</div>
+            <h3>Artes para redes sociales</h3>
+            <p>FB, IG, LinkedIn, X, historias, carruseles, anuncios, promos, contenido educativo, y estilo adaptable a tu nicho.</p>
+            <ul class="list">
+              <li>Plantillas + línea visual</li>
+              <li>Jerarquía, contraste, legibilidad</li>
+              <li>Paquetes mensuales</li>
+            </ul>
           </article>
 
           <article class="card reveal">
-            <div class="icon">🧩</div>
-            <h3>Portafolio / Web corporativa</h3>
-            <p>Tu presencia digital bien armada, con estética profesional, estructura ordenada y navegación simple.</p>
+            <div class="cardIcon">⟡</div>
+            <h3>Papelería para emprendimientos</h3>
+            <p>Invitaciones, tarjetas, etiquetas, stickers, menús, flyers, y piezas listas para imprimir con medidas correctas.</p>
+            <ul class="list">
+              <li>Archivos para imprenta</li>
+              <li>Troquel, sangrado, márgenes</li>
+              <li>Detalles finos, sin enredos</li>
+            </ul>
           </article>
 
           <article class="card reveal">
-            <div class="icon">⚙️</div>
-            <h3>Optimización y mejoras</h3>
-            <p>Velocidad, ajustes visuales, copy más claro, llamadas a la acción y detalles que elevan el nivel.</p>
+            <div class="cardIcon">⬢</div>
+            <h3>Packaging y ajustes de logo</h3>
+            <p>Diseño de cajas para diferentes productos, ajustes de logo para impresión, versiones, formatos y usos reales.</p>
+            <ul class="list">
+              <li>Mockups / visualización</li>
+              <li>Adaptación a materiales</li>
+              <li>Entrega ordenada</li>
+            </ul>
           </article>
+        </div>
+
+        <div class="ctaBar reveal">
+          <div>
+            <h3>Si quieres que tu marca se vea consistente desde hoy</h3>
+            <p>Te preparo una propuesta rápida, con tiempos, entregables, y estilo visual acorde a tu negocio.</p>
+          </div>
+          <a class="btn primary" href="#contacto">Escribir ahora</a>
         </div>
       </div>
     </section>
 
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="section alt">
-      <div class="container">
+    <!-- PORTAFOLIO -->
+    <section id="portafolio" class="section">
+      <div class="wrap">
         <div class="sectionHead reveal">
-          <h2>Proyectos</h2>
-          <p class="muted">Ejemplos de cómo se verían tus trabajos, con imágenes reales.</p>
+          <h2>Portafolio</h2>
+          <p>
+            Aquí van tus trabajos, por ahora dejé una galería elegante con “placeholders”,
+            luego tú solo reemplazas títulos y descripciones por tus proyectos reales.
+          </p>
         </div>
 
-        <div class="portfolio">
-          <a class="work reveal" href="#" aria-label="Proyecto 1">
-            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=80" alt="Proyecto 1" loading="lazy">
-            <div class="workInfo">
-              <h3>Landing para servicios</h3>
-              <p>Diseño claro, CTA fuerte y estilo elegante.</p>
-            </div>
-          </a>
+        <div class="filters reveal" role="tablist" aria-label="Filtros de portafolio">
+          <button class="fBtn active" data-filter="all" role="tab">Todo</button>
+          <button class="fBtn" data-filter="social" role="tab">Redes</button>
+          <button class="fBtn" data-filter="print" role="tab">Papelería</button>
+          <button class="fBtn" data-filter="pack" role="tab">Packaging</button>
+        </div>
 
-          <a class="work reveal" href="#" aria-label="Proyecto 2">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80" alt="Proyecto 2" loading="lazy">
-            <div class="workInfo">
-              <h3>Portafolio personal</h3>
-              <p>Secciones limpias, responsive y rápido.</p>
+        <div class="gallery" id="gallery">
+          <!-- Social -->
+          <article class="work reveal" data-cat="social">
+            <div class="workThumb t1">
+              <span class="workBadge">IG</span>
             </div>
-          </a>
+            <div class="workInfo">
+              <h3>Pack de posts para promoción</h3>
+              <p>Diseño con jerarquía clara, texto que respira, y estilo consistente.</p>
+              <span class="workMeta">Formato: Feed / Story</span>
+            </div>
+          </article>
 
-          <a class="work reveal" href="#" aria-label="Proyecto 3">
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Proyecto 3" loading="lazy">
-            <div class="workInfo">
-              <h3>Web corporativa</h3>
-              <p>Imagen de marca sólida y profesional.</p>
+          <article class="work reveal" data-cat="social">
+            <div class="workThumb t2">
+              <span class="workBadge">LinkedIn</span>
             </div>
-          </a>
+            <div class="workInfo">
+              <h3>Contenido profesional</h3>
+              <p>Minimal, serio, pero con un toque que no se ve plano.</p>
+              <span class="workMeta">Formato: Carrusel</span>
+            </div>
+          </article>
+
+          <!-- Print -->
+          <article class="work reveal" data-cat="print">
+            <div class="workThumb t3">
+              <span class="workBadge">Print</span>
+            </div>
+            <div class="workInfo">
+              <h3>Invitación / tarjeta</h3>
+              <p>Listo para impresión, medidas correctas, y detalles finos.</p>
+              <span class="workMeta">PDF + editable</span>
+            </div>
+          </article>
+
+          <article class="work reveal" data-cat="print">
+            <div class="workThumb t4">
+              <span class="workBadge">Sticker</span>
+            </div>
+            <div class="workInfo">
+              <h3>Stickers para producto</h3>
+              <p>Diseño compacto, legible, y pensado para varios tamaños.</p>
+              <span class="workMeta">CMYK / sangrado</span>
+            </div>
+          </article>
+
+          <!-- Packaging -->
+          <article class="work reveal" data-cat="pack">
+            <div class="workThumb t5">
+              <span class="workBadge">Caja</span>
+            </div>
+            <div class="workInfo">
+              <h3>Diseño de caja (packaging)</h3>
+              <p>Visual limpio con presencia, ideal para marca emergente.</p>
+              <span class="workMeta">Dieline / mockup</span>
+            </div>
+          </article>
+
+          <article class="work reveal" data-cat="pack">
+            <div class="workThumb t6">
+              <span class="workBadge">Etiqueta</span>
+            </div>
+            <div class="workInfo">
+              <h3>Etiqueta + ajuste de logo</h3>
+              <p>Corrección de proporciones, versiones, y salida para impresión.</p>
+              <span class="workMeta">AI / PDF / PNG</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- PROCESO -->
     <section id="proceso" class="section">
-      <div class="container">
+      <div class="wrap">
         <div class="sectionHead reveal">
-          <h2>Mi proceso</h2>
-          <p class="muted">Ordenado, rápido y sin enredos.</p>
+          <h2>Proceso simple, sin drama, sin vueltas raras</h2>
+          <p>
+            Para que el resultado salga bien, el camino también debe ser claro, y si algo se ajusta,
+            se ajusta rápido, con comunicación directa.
+          </p>
         </div>
 
         <div class="steps">
-          <div class="step card reveal">
-            <span class="stepNum">01</span>
+          <div class="step reveal">
+            <div class="stepNum">01</div>
             <h3>Brief rápido</h3>
-            <p>Definimos objetivo, público y estilo visual, con ejemplos.</p>
+            <p>Me cuentas tu idea, tu producto, tu público, y qué necesitas, con eso ya aterrizamos el estilo.</p>
           </div>
-          <div class="step card reveal">
-            <span class="stepNum">02</span>
-            <h3>Diseño + estructura</h3>
-            <p>Armo la página con secciones que dan confianza y convierten.</p>
+          <div class="step reveal">
+            <div class="stepNum">02</div>
+            <h3>Propuesta visual</h3>
+            <p>Te muestro una línea visual, referencias, y un primer diseño base, aquí se define el rumbo.</p>
           </div>
-          <div class="step card reveal">
-            <span class="stepNum">03</span>
-            <h3>Entrega + ajustes</h3>
-            <p>Publicación, revisión final y cambios pequeños incluidos.</p>
+          <div class="step reveal">
+            <div class="stepNum">03</div>
+            <h3>Producción</h3>
+            <p>Se hacen las piezas, se revisan detalles, y se entrega en formatos correctos para uso real.</p>
+          </div>
+          <div class="step reveal">
+            <div class="stepNum">04</div>
+            <h3>Entrega ordenada</h3>
+            <p>Recibes todo bien nombrado, bien exportado, y listo para publicar o imprimir.</p>
+          </div>
+        </div>
+
+        <div class="split reveal">
+          <div class="splitCard">
+            <h3>Herramientas</h3>
+            <p>Trabajo con Photoshop, Illustrator, Canva, y flujos de exportación para redes e imprenta.</p>
+            <div class="tags">
+              <span class="tag">PS</span><span class="tag">AI</span><span class="tag">Canva</span>
+              <span class="tag">CMYK</span><span class="tag">Branding</span><span class="tag">Mockups</span>
+            </div>
+          </div>
+          <div class="splitCard">
+            <h3>Lo que más cuido</h3>
+            <p>Jerarquía, coherencia de marca, limpieza visual, y que el mensaje se entienda en segundos.</p>
+            <div class="bars" aria-hidden="true">
+              <div class="bar"><span style="width:92%"></span></div>
+              <div class="bar"><span style="width:86%"></span></div>
+              <div class="bar"><span style="width:90%"></span></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="section alt">
-      <div class="container contactGrid">
-        <div class="reveal">
-          <h2>Contacto</h2>
-          <p class="muted">Me dices qué necesitas y te lo armo con un estilo bien pro.</p>
+    <section id="contacto" class="section">
+      <div class="wrap">
+        <div class="contactBox reveal">
+          <div class="contactCopy">
+            <h2>Listo, hagamos que tu marca se vea seria y atractiva</h2>
+            <p>
+              Escríbeme por WhatsApp y dime qué necesitas, si es redes, papelería, packaging, o todo junto,
+              y te respondo con una propuesta clara, sin complicarlo.
+            </p>
 
-          <div class="contactCard card">
-            <p><b>Email:</b> tuemail@dominio.com</p>
-            <p><b>WhatsApp:</b> +593 000 000 000</p>
-            <p><b>Ubicación:</b> Ecuador / Remoto</p>
+            <div class="contactBtns">
+              <a class="btn primary" target="_blank" rel="noopener"
+                 href="https://wa.me/593986718265?text=Hola%20Jonathan,%20quiero%20cotizar%20dise%C3%B1o%20para%20mi%20marca">
+                WhatsApp directo
+              </a>
+
+              <!-- Reemplaza este link por tu link real de agenda (Calendly/Google Appointment) -->
+              <a class="btn ghost" target="_blank" rel="noopener"
+                 href="https://calendar.google.com/">
+                Agendar una llamada
+              </a>
+            </div>
+
+            <div class="mini">
+              <span class="miniDot"></span>
+              <span>Respuesta rápida, y si ya tienes referencias, mejor todavía</span>
+            </div>
           </div>
 
-          <p class="tiny muted">Tip: si quieres, pongo links directos a WhatsApp, Instagram y correo.</p>
+          <form class="contactForm" id="leadForm">
+            <label>
+              <span>Nombre</span>
+              <input required name="nombre" type="text" placeholder="Tu nombre" />
+            </label>
+            <label>
+              <span>Qué necesitas</span>
+              <select required name="servicio">
+                <option value="" selected disabled>Elige una opción</option>
+                <option>Artes para redes</option>
+                <option>Papelería / impresión</option>
+                <option>Packaging</option>
+                <option>Todo (pack completo)</option>
+              </select>
+            </label>
+            <label>
+              <span>Mensaje</span>
+              <textarea required name="mensaje" rows="4" placeholder="Cuéntame tu idea en 2 o 3 líneas"></textarea>
+            </label>
+
+            <button class="btn primary full" type="submit">
+              Enviar por WhatsApp
+            </button>
+
+            <p class="fine">
+              Este formulario no guarda datos, solo arma tu mensaje y lo abre en WhatsApp.
+            </p>
+          </form>
         </div>
 
-        <form class="card form reveal" id="contactForm">
-          <label>
-            Nombre
-            <input name="name" type="text" placeholder="Tu nombre" required />
-          </label>
-
-          <label>
-            Email
-            <input name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
-          </label>
-
-          <label>
-            Mensaje
-            <textarea name="message" rows="5" placeholder="Cuéntame qué sitio quieres..." required></textarea>
-          </label>
-
-          <button class="btn" type="submit">Enviar</button>
-          <p class="tiny muted" id="formMsg"></p>
-        </form>
+        <footer class="footer reveal">
+          <div>
+            <span class="brandMark sm">JL</span>
+            <span class="footName">© <span id="year"></span> Jonathan Lavayen</span>
+          </div>
+          <div class="footLinks">
+            <a href="#home">Inicio</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </footer>
       </div>
     </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a class="waFloat" target="_blank" rel="noopener"
+       href="https://wa.me/593986718265?text=Hola%20Jonathan,%20quiero%20informaci%C3%B3n%20sobre%20tus%20servicios"
+       aria-label="Abrir WhatsApp">
+      <span class="waPulse" aria-hidden="true"></span>
+      <span class="waIcon" aria-hidden="true">✆</span>
+      <span class="waText">WhatsApp</span>
+    </a>
   </main>
-
-  <!-- Botón flotante WhatsApp -->
-  <a class="waFloat" href="https://wa.me/593000000000" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-    WhatsApp
-  </a>
-
-  <footer class="footer">
-    <div class="container footerRow">
-      <span>© <span id="year"></span> Mi Portafolio</span>
-      <a href="#top">Subir ↑</a>
-    </div>
-  </footer>
 
   <script src="./script.js"></script>
 </body>
